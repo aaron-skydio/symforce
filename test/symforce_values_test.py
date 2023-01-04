@@ -63,6 +63,7 @@ class SymforceValuesTest(LieGroupOpsTestMixin, TestCase):
         return v
 
     def test_as_ordered_dict(self) -> None:
+        self.fail()
         # TODO(nathan): Disallow adding strings as elements? Certain functions break with string elements
         v = Values(z=5, bar="foo")
         self.assertEqual(v["z"], 5)
