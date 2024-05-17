@@ -24,16 +24,12 @@ bleach==6.1.0
     # via nbconvert
 breathe==4.35.0
     # via symforce (pyproject.toml)
-build==1.2.1
-    # via pip-tools
 certifi==2024.2.2
     # via requests
 charset-normalizer==3.3.2
     # via requests
 clang-format==18.1.5
     # via symforce (pyproject.toml)
-click==8.1.7
-    # via pip-tools
 cmake==3.26.4
     # via symforce (pyproject.toml)
 comm==0.2.2
@@ -175,7 +171,6 @@ numpy==1.26.4
     #   symforce-sym
 packaging==24.0
     # via
-    #   build
     #   ipykernel
     #   matplotlib
     #   nbconvert
@@ -192,10 +187,6 @@ pexpect==4.9.0
 pillow==10.3.0
     # via matplotlib
 pip==24.0
-    # via
-    #   symforce (pyproject.toml)
-    #   pip-tools
-pip-tools==7.4.1
     # via symforce (pyproject.toml)
 platformdirs==4.2.2
     # via
@@ -225,10 +216,6 @@ pylint==3.2.0
     # via symforce (pyproject.toml)
 pyparsing==3.1.2
     # via matplotlib
-pyproject-hooks==1.1.0
-    # via
-    #   build
-    #   pip-tools
 python-dateutil==2.9.0.post0
     # via
     #   jupyter-client
@@ -257,9 +244,7 @@ ruff==0.3.7
 scipy==1.13.0
     # via symforce (pyproject.toml)
 setuptools==69.5.1
-    # via
-    #   symforce (pyproject.toml)
-    #   pip-tools
+    # via symforce (pyproject.toml)
 six==1.16.0
     # via
     #   asttokens
@@ -343,6 +328,8 @@ urllib3==2.2.1
     # via
     #   requests
     #   types-requests
+uv==0.1.44
+    # via symforce (pyproject.toml)
 wcwidth==0.2.13
     # via prompt-toolkit
 webencodings==0.5.1
@@ -350,6 +337,4 @@ webencodings==0.5.1
     #   bleach
     #   tinycss2
 wheel==0.43.0
-    # via
-    #   symforce (pyproject.toml)
-    #   pip-tools
+    # via symforce (pyproject.toml)
