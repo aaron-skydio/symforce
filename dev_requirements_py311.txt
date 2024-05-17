@@ -34,6 +34,8 @@ clang-format==18.1.5
     # via symforce (pyproject.toml)
 click==8.1.7
     # via pip-tools
+cmake==3.26.4
+    # via symforce (pyproject.toml)
 comm==0.2.2
     # via ipykernel
 contourpy==1.2.1
@@ -42,6 +44,8 @@ coverage==7.5.1
     # via symforce (pyproject.toml)
 cycler==0.12.1
     # via matplotlib
+cython==0.29.37
+    # via symforce (pyproject.toml)
 debugpy==1.8.1
     # via ipykernel
 decorator==5.1.1
@@ -188,7 +192,9 @@ pexpect==4.9.0
 pillow==10.3.0
     # via matplotlib
 pip==24.0
-    # via pip-tools
+    # via
+    #   symforce (pyproject.toml)
+    #   pip-tools
 pip-tools==7.4.1
     # via symforce (pyproject.toml)
 platformdirs==4.2.2
@@ -251,7 +257,9 @@ ruff==0.3.7
 scipy==1.13.0
     # via symforce (pyproject.toml)
 setuptools==69.5.1
-    # via pip-tools
+    # via
+    #   symforce (pyproject.toml)
+    #   pip-tools
 six==1.16.0
     # via
     #   asttokens
@@ -344,4 +352,6 @@ webencodings==0.5.1
     #   bleach
     #   tinycss2
 wheel==0.43.0
-    # via pip-tools
+    # via
+    #   symforce (pyproject.toml)
+    #   pip-tools
