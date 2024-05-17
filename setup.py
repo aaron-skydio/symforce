@@ -465,6 +465,6 @@ if __name__ == "__main__":
                 "types-requests",
                 "types-setuptools",
             ],
-            "_setup": setup_requirements,
+            "setup": setup_requirements,
         },
     )
