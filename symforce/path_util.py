@@ -4,6 +4,7 @@
 # ----------------------------------------------------------------------------
 
 import json
+import os
 import typing as T
 from pathlib import Path
 
@@ -66,14 +67,18 @@ def symforce_root() -> Path:
     return Path(__file__).parent.parent
 
 
-def symforce_data_root() -> Path:
+def symforce_data_root(test_file_path: T.Optional[str]) -> Path:
     """
     The root directory of the symforce project, for use accessing data that might need to be updated
-    (such as generated files).  Most of the time this is the same as :func:`symforce_root`, but when
-    the ``--update`` flag is passed to a test, this is guaranteed to point to the *resolved*
+    (such as generated files).  Most of the time this is the same as :func:`symforce_root`, except for two cases:
+
+    when the ``--update`` flag is passed to a test, this is guaranteed to point to the *resolved*
     version, i.e. the actual symforce location on disk regardless of whether this path is a symlink.
     """
     from symforce.test_util.test_case_mixin import SymforceTestCaseMixin
+
+    if test_file_path is not None and "SYMFORCE_WHEEL_TESTS" in os.environ:
+        return Path(test_file_path).resolve().parent.parent
 
     if SymforceTestCaseMixin.should_update():
         return Path(__file__).resolve().parent.parent
